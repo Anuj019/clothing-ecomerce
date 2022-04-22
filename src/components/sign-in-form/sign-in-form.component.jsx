@@ -2,7 +2,7 @@ import { async } from "@firebase/util";
 import { useState, useContext } from "react";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../button/button.component";
+import Button, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth, signInWithGooglePopup, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 
 import './sign-in-form.styles.scss'
@@ -72,7 +72,7 @@ const signInWithGoogle = async () => {
             
              <div className="buttons-container">
              <Button  type="submit">Sign In </Button>
-            <Button buttonType='google' type="button" onClick={signInWithGoogle}> Goolge Sign In </Button>
+            <Button buttonType={BUTTON_TYPE_CLASSES.google} type="button" onClick={signInWithGoogle}> Goolge Sign In </Button>
              </div>
 
             
